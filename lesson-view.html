@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson View - LMS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="/dashboard.html">LMS Platform</a>
+        </div>
+        <nav class="main-nav">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/courses.html">Courses</a>
+            <a href="/profile.html">Profile</a>
+        </nav>
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <!-- Left Sidebar: Course Syllabus -->
+            <aside class="course-syllabus">
+                <h3 id="course-title-sidebar">Loading...</h3>
+                <div id="syllabus-container">
+                    <!-- Dynamic modules and lessons will be inserted here by lesson-view.js -->
+                </div>
+            </aside>
+
+            <!-- Right Side: Lesson Content -->
+            <section class="lesson-content">
+                <div class="lesson-header">
+                    <h1 id="lesson-title">Loading Lesson...</h1>
+                </div>
+
+                <div class="video-container">
+                    <iframe id="lesson-video" src="" title="Lesson Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <article class="lesson-text" id="lesson-text-content">
+                    <p>Loading lesson content, please wait...</p>
+                </article>
+
+                <div class="lesson-actions">
+                    <button id="markCompleteBtn">Mark as Complete</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 LMS Platform by seoustaad.com</p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/lesson-view.js"></script>
+</body>
+</html>

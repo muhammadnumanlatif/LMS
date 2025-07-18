@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Discovery - LMS</title>
+    <meta name="author" content="seoustaad.com">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="/dashboard.html" class="logo">LMS Platform</a>
+        <nav class="main-nav">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/courses.html" class="active">Courses</a>
+            <a href="/student-dashboard.html" id="student-link" style="display: none;">My Progress</a>
+            <a href="/teacher-dashboard.html" id="teacher-link" style="display: none;">My Creations</a>
+            <a href="/profile.html">Profile</a>
+        </nav>
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Course Discovery</h1>
+            <p>Explore our library of expert-led courses.</p>
+        </header>
+
+        <section class="course-filters" aria-label="Course Filters">
+            <div class="filter-group">
+                <input type="search" id="search-input" placeholder=" Search by course title..." style="font-family: 'Segoe UI', FontAwesome">
+            </div>
+            <div class="filter-group">
+                <select id="category-filter" aria-label="Filter by category">
+                    <option value="">All Categories</option>
+                    <!-- Options will be populated by courses.js -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <select id="instructor-filter" aria-label="Filter by instructor">
+                    <option value="">All Instructors</option>
+                    <!-- Options will be populated by courses.js -->
+                </select>
+            </div>
+        </section>
+
+        <section id="courses-container" class="courses-grid" aria-live="polite">
+            <!-- Course cards will be injected here by JavaScript -->
+        </section>
+        
+        <div id="no-results" style="display: none;">
+            <h3>No courses found</h3>
+            <p>Try adjusting your search or filter criteria.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 LMS Platform by seoustaad.com</p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/courses.js"></script>
+</body>
+</html>

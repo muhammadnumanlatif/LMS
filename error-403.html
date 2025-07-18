@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied - LMS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <style>
+        /* Standalone styles for the error page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-color, #FFFBDE);
+            color: var(--text-color, #333);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .error-container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: var(--card-bg, #ffffff);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color, #ddd);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .error-container h1 {
+            font-size: 6rem;
+            margin: 0;
+            color: var(--accent-color, #096B68);
+            font-weight: 700;
+        }
+
+        .error-container h2 {
+            font-size: 1.75rem;
+            margin-top: 10px;
+            color: var(--secondary-color, #129990);
+        }
+
+        .error-container p {
+            margin-top: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: var(--accent-color, #096B68);
+            color: #FFFBDE;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: var(--secondary-color, #129990);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>403</h1>
+        <h2>Access Forbidden</h2>
+        <p>
+            You do not have the necessary permissions to view this page. This area is restricted to authorized users only.
+        </p>
+        <a href="/dashboard.html" class="home-link">Go to Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - LMS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="/dashboard.html">LMS Platform</a>
+        </div>
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/courses.html">Courses</a>
+            <a href="/teacher-dashboard.html" class="active">My Creations</a>
+            <a href="/profile.html">Profile</a>
+        </nav>
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="dashboard-header">
+            <h1>Teacher Dashboard</h1>
+            <p>Manage your courses, students, and grading all in one place.</p>
+        </header>
+
+        <section id="course-management" class="dashboard-widget">
+            <div class="widget-header">
+                <h2>My Course Management</h2>
+                <a href="/create-course.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Course</a>
+            </div>
+            <div id="teacher-courses-grid" class="courses-grid">
+                <!-- Courses created by the teacher will be dynamically inserted here -->
+                <p>Loading your courses...</p>
+            </div>
+        </section>
+
+        <section id="student-management" class="dashboard-widget">
+            <h2>Student Management</h2>
+            <div id="teacher-students-list">
+                <!-- List of students across all courses will be dynamically inserted here -->
+                <p>Loading student overview...</p>
+            </div>
+        </section>
+
+        <section id="grading-center" class="dashboard-widget">
+            <h2>Grading Center</h2>
+            <div id="assignments-to-grade">
+                <!-- Assignments needing grading will be dynamically inserted here -->
+                <p>No assignments currently awaiting grading.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 LMS Platform by seoustaad.com</p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/teacher-dashboard.js"></script>
+</body>
+</html>

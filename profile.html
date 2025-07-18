@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - LMS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="/dashboard.html">LMS Platform</a>
+        </div>
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/courses.html">Courses</a>
+            <a href="/profile.html" class="active">Profile</a>
+        </nav>
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="/assets/images/default-avatar.png" alt="Profile Picture" id="profile-picture-display" class="profile-picture">
+                <div class="profile-header-info">
+                    <h2 id="display-name">Loading...</h2>
+                    <p id="display-role">Loading...</p>
+                </div>
+            </div>
+
+            <form id="profile-form" class="lms-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address (Cannot be changed)</label>
+                    <input type="email" id="email" name="email" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="profilePicUrl">Profile Picture URL</label>
+                    <input type="url" id="profilePicUrl" name="profilePicUrl" placeholder="https://example.com/image.png">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Your Bio</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Save Changes</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="toast-notification" class="toast">Profile updated successfully!</div>
+
+    <footer class="main-footer">
+        <p>© 2025 LMS Platform by seoustaad.com</p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/profile.js"></script>
+</body>
+</html>

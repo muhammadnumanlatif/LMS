@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="/dashboard.html">LMS</a></h3>
+            </div>
+            <ul>
+                <li><a href="/dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="/courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li id="student-dashboard-link-container" style="display: none;"><a href="/student-dashboard.html"><i class="fas fa-user-graduate"></i> Student Dashboard</a></li>
+                <li id="teacher-dashboard-link-container" style="display: none;"><a href="/teacher-dashboard.html"><i class="fas fa-chalkboard-teacher"></i> Teacher Dashboard</a></li>
+                <li><a href="/profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Welcome, <span id="user-name">Loading...</span>!</h1>
+            </header>
+            <div id="dashboard-widgets" class="dashboard-grid">
+                <!-- Widgets will be dynamically inserted here by dashboard.js -->
+            </div>
+        </main>
+    </div>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>

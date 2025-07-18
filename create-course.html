@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Course - LMS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="/dashboard.html">LMS Platform</a>
+        </div>
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/courses.html">Courses</a>
+            <a href="/teacher-dashboard.html" class="active">My Creations</a>
+            <a href="/profile.html">Profile</a>
+        </nav>
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <header class="form-header">
+                <h1>Create a New Course</h1>
+                <p>Fill out the details below to launch your new course.</p>
+            </header>
+
+            <form id="create-course-form" class="lms-form">
+                <fieldset>
+                    <legend>Course Information</legend>
+                    <div class="form-group">
+                        <label for="course-title">Course Title</label>
+                        <input type="text" id="course-title" name="courseTitle" placeholder="e.g., Modern JavaScript from Scratch" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course-description">Course Description</label>
+                        <textarea id="course-description" name="courseDescription" rows="4" placeholder="A brief summary of what students will learn." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course-category">Category</label>
+                        <input type="text" id="course-category" name="courseCategory" placeholder="e.g., Web Development, Design" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course-thumbnail">Thumbnail Image URL</label>
+                        <input type="url" id="course-thumbnail" name="courseThumbnail" placeholder="https://example.com/image.png" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Course Content</legend>
+                    <div id="modules-container">
+                        <!-- Dynamic modules and lessons are injected here by create-course.js -->
+                    </div>
+                    <button type="button" id="add-module-btn" class="btn btn-secondary">
+                        <i class="fas fa-plus-circle"></i> Add Module
+                    </button>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-save"></i> Save and Publish Course
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 LMS Platform by seoustaad.com</p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/create-course.js"></script>
+</body>
+</html>
